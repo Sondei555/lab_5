@@ -1,0 +1,54 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #f0f8ff, #dce9f9);
+  color: #333;
+}
+
+header, nav, main, section, article, aside, footer {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  cursor: pointer;
+}
+
+section {
+  background: radial-gradient(circle, #e0f7fa, #b2ebf2);
+  outline: 3px dashed #8bc34a;
+  resize: both;
+  overflow: auto;
+}
+
+article {
+  border-image: url("https://www.transparenttextures.com/patterns/cubes.png") 30 round;
+  border-width: 10px;
+  border-style: solid;
+}
+
+blockquote {
+  quotes: "«" "»";
+  text-decoration: underline dotted;
+  text-shadow: 1px 1px 2px gray;
+}
+
+footer {
+  background: linear-gradient(to right, #2196f3, #21cbf3);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  caret-color: red;
+}
