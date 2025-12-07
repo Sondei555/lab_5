@@ -1,24 +1,17 @@
-/* style5.css - Стилізація семантичних елементів (Стиль "Casual" зі зразка) */
-
-/* --- ЗАГАЛЬНІ СТИЛІ ТА ФОН --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Градієнт: від світло-сірого до світло-блакитного */
     background: linear-gradient(135deg, #f0f8ff, #e9f0f9); 
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-/* 1. СТИЛІ HEADER ТА NAV */
-
 header {
-    background-color: #365F93; /* Темно-синій фон */
+    background-color: #365F93;
     color: white;
     padding: 30px 20px;
     text-align: center;
     margin-bottom: 20px;
-    /* Тінь тексту для головного заголовка */
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); 
 }
 
@@ -28,7 +21,7 @@ hgroup h1 {
 }
 
 nav {
-    background-color: #6a96c9; /* Середній блакитний */
+    background-color: #6a96c9;
 }
 
 nav ul {
@@ -52,8 +45,6 @@ nav a:hover {
     background-color: #365F93;
 }
 
-/* 2. СТИЛІ MAIN ТА SECTION */
-
 main {
     padding: 20px;
     display: flex;
@@ -65,21 +56,13 @@ section {
     margin-bottom: 30px;
 }
 
-/* 3. СТИЛІ ARTICLE ТА ASIDE */
-
 article {
     width: 65%;
     margin-right: 3%;
     padding: 25px;
     background-color: white;
-    
-    /* Тінь блоку (схожа на зразок) */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
-    
-    /* border-radius */
     border-radius: 15px; 
-    
-    /* Властивість resize (зміна розміру блоків) */
     resize: horizontal; 
     overflow: auto;
 }
@@ -87,48 +70,46 @@ article {
 aside {
     width: 28%;
     padding: 20px;
-    background-color: #e0f2ff; /* Світлий фон для aside */
+    background-color: #e0f2ff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 10px;
+    border: 15px solid transparent; 
+    border-image-source: url('ramka (1).gif'); 
+    border-image-slice: 30; 
+    border-image-repeat: repeat; 
+    border-image-width: 15px; 
+    border-image-outset: 5px; 
 }
 
-/* 4. ОФОРМЛЕННЯ ТЕКСТУ ТА КОНТЕНТ */
-
 .article-title {
-    /* text-decoration-… (підкреслення) */
     text-decoration: underline solid #365F93; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
-/* CSS-властивість content: додавання спеціальних символів та значення атрибуту */
 p[data-author]::before {
     content: "Авт. (" attr(data-author) "): "; 
-    color: #99004d; /* Темно-рожевий */
+    color: #99004d;
     font-weight: bold;
 }
 
-/* Стилізація курсору та каретки */
 input[type="text"], textarea {
     cursor: grab; 
-    caret-color: #365F93; /* Синій колір каретки */
+    caret-color: #365F93;
     border: 1px solid #ccc;
     padding: 5px;
 }
 
-/* Властивості external-outline */
 main:focus-within {
     outline: dashed 3px #365F93; 
     outline-offset: 5px;
 }
 
-/* Форматування лапок: властивість quotes та content */
 blockquote {
     quotes: "«" "»" "‘" "’"; 
     margin: 20px 0;
     padding: 10px 20px;
-    border-left: 5px solid #6a96c9; /* Блакитна смуга */
+    border-left: 5px solid #6a96c9;
     font-style: italic;
-    /* Градієнт: radial-gradient() */
     background: radial-gradient(circle at top left, #f7f7f7 10%, #ffffff 90%); 
 }
 
@@ -144,25 +125,46 @@ blockquote p::after {
     color: #365F93;
 }
 
-/* 5. CSS3-РАМКА: border-image (Рамка-зображення) */
-
-aside {
-    /* Залишаємо рамку-зображення для виконання вимоги */
-    border: 15px solid transparent; 
-    border-image-source: url('ramka (1).gif'); 
-    border-image-slice: 30; 
-    border-image-repeat: repeat; 
-    border-image-width: 15px; 
-    border-image-outset: 5px; 
+figure {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 6. СТИЛІ FOOTER */
+figure img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease;
+    /* Тінь навколо самого зображення */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+figure a:hover img {
+    /* Ефект масштабування при наведенні курсору */
+    transform: scale(1.03); 
+    opacity: 0.9;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    padding-top: 5px;
+    border-top: 1px dashed #eee;
+}
+
 footer {
     background-color: #365F93;
     color: white;
     text-align: center;
     padding: 10px 0;
-    clear: both; /* Очистка плаваючих елементів */
+    clear: both;
 }
 
 footer a {
